@@ -1,0 +1,19 @@
+ name: Minha Primeira Linha de Producao
+
+ on:
+      push:
+          branches: [ master ]
+
+ jobs:
+     build-e-teste:
+         runs-on: ubuntu-latest
+
+         steps:
+            - name: 1. Pegar o chassi do veiculo
+              uses: actions/checkout@v3
+
+            - name: 2. Estação de build
+              run: echo "Construindo o projeto"
+
+            - name: 3. Estação de teste
+              run: echo "Rodando os testes de integração"
